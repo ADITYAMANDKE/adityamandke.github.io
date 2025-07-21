@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
 </head>
 <body>
   <header class="site-header">
@@ -12,8 +12,8 @@
       <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
       <nav class="site-nav">
         <!-- You can add navigation links here -->
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
+        <a href="{{ "/" | relative_url }}">Home</a>
+        <a href="{{ "/about.html" | relative_url }}">About</a>
       </nav>
     </div>
   </header>
