@@ -31,6 +31,14 @@ body {
     font-weight: bold;
     text-decoration: none;
     color: #e0e0e0; /* Light text color */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center items */
+}
+
+.site-logo {
+    margin-right: 12px; /* Space between logo and title */
+    display: flex;
+    align-items: center;
 }
 
 .site-nav {
