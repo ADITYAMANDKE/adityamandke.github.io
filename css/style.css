@@ -197,6 +197,17 @@ body {
 .info-page p {
     font-size: 24px;
     margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.info-page p a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.info-page p a:hover {
+    opacity: 0.8;
 }
 
 .social-links {
