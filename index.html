@@ -4,22 +4,8 @@ title: Home
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-    </li>
-    {%- endfor -%}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+  <h1 class="page-heading">Welcome</h1>
+  
+  <p>Welcome to my GitHub Pages site! Explore my <a href="{{ "/blog.html" | relative_url }}">blog</a>, check out my <a href="{{ "/projects.html" | relative_url }}">projects</a>, or learn more <a href="{{ "/info.html" | relative_url }}">about me</a>.</p>
 </div>
+

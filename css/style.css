@@ -8,8 +8,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.6;
-    color: #e0e0e0; /* Light text color for dark background */
-    background: #121212; /* Dark background color */
+    color: #ffffff; /* White text color */
+    background: #993399; /* Purple background color */
     padding: 20px;
 }
 
@@ -21,16 +21,22 @@ body {
 
 /* Header */
 .site-header {
-    border-bottom: 1px solid #30363d; /* Darker border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent white border */
     padding-bottom: 20px;
     margin-bottom: 30px;
+}
+
+.site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .site-title {
     font-size: 26px;
     font-weight: bold;
     text-decoration: none;
-    color: #e0e0e0; /* Light text color */
+    color: #ffffff; /* White text color */
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Vertically center items */
 }
@@ -42,14 +48,19 @@ body {
 }
 
 .site-nav {
-    float: right;
-    line-height: 2.5;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .site-nav a {
-    margin-left: 15px;
-    color: #c9d1d9; /* Lighter grey for nav links */
+    color: #ffffff; /* White for nav links */
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+    color: #ffd700; /* Gold color on hover */
 }
 
 /* Page Content */
@@ -64,7 +75,7 @@ body {
 
 .post-list li {
     margin-bottom: 20px;
-    border-bottom: 1px solid #30363d; /* Darker border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent white border */
     padding-bottom: 20px;
 }
 
@@ -75,13 +86,13 @@ body {
 
 .post-meta {
     font-size: 14px;
-    color: #8b949e; /* Muted text color */
+    color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for muted text */
 }
 
 .post-link {
     text-decoration: none;
     font-size: 22px;
-    color: #58a6ff; /* A nice blue for links */
+    color: #ffffff; /* White for links */
 }
 
 /* Post Page */
@@ -106,12 +117,12 @@ body {
 
 .post-content pre,
 .post-content code {
-    background-color: #1c1c1c; /* Slightly lighter dark for code blocks */
-    border: 1px solid #30363d;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark for code blocks */
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 3px;
     padding: 8px 12px;
     font-size: 14px;
-    color: #c9d1d9;
+    color: #ffffff;
 }
 
 .post-content pre {
@@ -123,10 +134,70 @@ body {
     padding: 2px 4px;
 }
 
+/* Home Page */
+.home {
+    text-align: center;
+}
+
+.home p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.home a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.home a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Page */
+.projects-page {
+    max-width: 800px;
+}
+
+.projects-list {
+    margin-top: 30px;
+}
+
+.project-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.project-item a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+/* Info Page */
+.info-page {
+    max-width: 800px;
+}
+
+.info-content {
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
 /* Footer */
 .site-footer {
-    border-top: 1px solid #30363d; /* Darker border */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent white border */
     padding: 30px 0;
     text-align: center;
-    color: #8b949e; /* Muted text color */
+    color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for muted text */
 }
