@@ -22,7 +22,7 @@ The goal was to build a model with <2048 parameters that maintains moderately hi
 
 A typical MNIST classifier uses multiple convolution layers followed by a linear layer. Without parameter constraints, the architecture often looks like this:
 
-### PyTorch Implementation
+### Layers (using Pytorch modules)
 ```python
 self.features = nn.Sequential(
     nn.Conv2d(1, 32, 3, padding=1),
@@ -54,8 +54,8 @@ For the first attempt, I reduced the channel counts while keeping the same basic
 
 | Layer | Details | Formula | Parameters |
 |-------|---------|---------|------------|
-| Conv1 | Conv(1 \to 8), 3 x 3 | (8 x (1 x 3 x 3) + 8) | 80 |
-| Conv2 | Conv(8 \to 16), 3 x 3 | (16 x (8 x 3 x 3) + 16) | 1,168 |
+| Conv1 | Conv(1 to 8), 3 x 3 | (8 x (1 x 3 x 3) + 8) | 80 |
+| Conv2 | Conv(8 to 16), 3 x 3 | (16 x (8 x 3 x 3) + 16) | 1,168 |
 | Linear | Linear(16, 10) | (16 x 10 + 10) | 170 |
 | **Total** | — | — | **1,418** |
 
