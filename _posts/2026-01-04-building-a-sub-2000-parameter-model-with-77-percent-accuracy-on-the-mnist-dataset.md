@@ -10,7 +10,7 @@ I recently completed a lab on the Deep-ML website that challenged me to build a 
 
 ## The Problem
 
-The goal was to build a model with $<2048$ parameters that maintains moderately high accuracy on MNIST. The primary task was minimizing the parameter count, as other training variables were fixed:
+The goal was to build a model with <2048 parameters that maintains moderately high accuracy on MNIST. The primary task was minimizing the parameter count, as other training variables were fixed:
 * **Optimizer**: Adam
 * **Learning Rate**: 1e-3
 * **Batch Size**: 128
@@ -41,9 +41,9 @@ self.classifier = nn.Sequential(
 
 ### Parameter Count Breakdown
 
-* **First Convolution**: $32 \times 1 \times 3 \times 3 = 288$ weights plus $32$ bias parameters = **320 total**.
-* **Second Convolution**: $64 \times 32 \times 3 \times 3 = 18,432$ weights plus $64$ bias parameters = **18,496 total**.
-* **Fully Connected Layer**: $64 \times 10 + 10$ bias = **650 total**.
+* **First Convolution**: 32 x 1 x 3 x 3 = 288 weights + 32 bias parameters = **320 total**.
+* **Second Convolution**: 64 x 32 x 3 x 3 = 18,432 weights + 64 bias parameters = **18,496 total**.
+* **Fully Connected Layer**: 64 x 10 + 10 bias = **650 total**.
 * **Grand Total**: **19,466 parameters**. This model is highly accurate but far exceeds our 2,000-parameter limit.
 
 ---
@@ -54,9 +54,9 @@ For the first attempt, I reduced the channel counts while keeping the same basic
 
 | Layer | Details | Formula | Parameters |
 |-------|---------|---------|------------|
-| Conv1 | $Conv(1 \to 8), 3 \times 3$ | $(8 \times (1 \times 3 \times 3) + 8)$ | 80 |
-| Conv2 | $Conv(8 \to 16), 3 \times 3$ | $(16 \times (8 \times 3 \times 3) + 16)$ | 1,168 |
-| Linear | $Linear(16, 10)$ | $(16 \times 10 + 10)$ | 170 |
+| Conv1 | Conv(1 \to 8), 3 x 3 | (8 x (1 x 3 x 3) + 8) | 80 |
+| Conv2 | Conv(8 \to 16), 3 x 3 | (16 x (8 x 3 x 3) + 16) | 1,168 |
+| Linear | Linear(16, 10) | (16 x 10 + 10) | 170 |
 | **Total** | — | — | **1,418** |
 
 **Result**: This model gave a relatively low accuracy of ~50%.
@@ -67,7 +67,7 @@ For the first attempt, I reduced the channel counts while keeping the same basic
 
 Normalization helps the optimizer find the minimum faster, which is critical when limited to 10 epochs. I added Batch Normalization after each convolution layer.
 
-These layers added $2 \times 8 + 2 \times 16 = 48$ extra parameters, bringing the total to **1,466**. This improved the accuracy to 56%, but it was still insufficient.
+These layers added 2 x 8 + 2 x 16 = 48 extra parameters, bringing the total to **1,466**. This improved the accuracy to 56%, but it was still insufficient.
 
 ---
 
@@ -79,13 +79,13 @@ Depthwise separable convolution (depthwise followed by pointwise) drastically re
 
 | Layer Type | Calculation | Params |
 |------------|-------------|--------|
-| Standard Conv (Conv1) | $1 \times 16 \times (3 \times 3)$ | 144 |
-| BatchNorm (BN1) | $16 \times 2$ | 32 |
-| Depthwise Conv (Conv2) | $16 \times (3 \times 3)$ | 144 |
-| BatchNorm (BN2) | $16 \times 2$ | 32 |
-| Pointwise Conv (Conv3) | $16 \times 58 \times (1 \times 1)$ | 928 |
-| BatchNorm (BN3) | $58 \times 2$ | 116 |
-| Linear (FC) | $(58 \times 10) + 10$ | 590 |
+| Standard Conv (Conv1) | 1 x 16 x (3 x 3) | 144 |
+| BatchNorm (BN1) | 16 x 2 | 32 |
+| Depthwise Conv (Conv2) | 16 x (3 x 3) | 144 |
+| BatchNorm (BN2) | 16 x 2 | 32 |
+| Pointwise Conv (Conv3) | 16 x 58 x (1 x 1) | 928 |
+| BatchNorm (BN3) | 58 x 2 | 116 |
+| Linear (FC) | (58 x 10) + 10 | 590 |
 | **TOTAL** | — | **1,986** |
 
 ---
