@@ -108,6 +108,7 @@ body {
 
 .post-content {
     font-size: 16px;
+    text-align: left;
 }
 
 .post-content h2 {
@@ -137,6 +138,11 @@ body {
 /* Home Page */
 .home {
     text-align: center;
+}
+
+/* Blog Page */
+.blog-page {
+    text-align: left;
 }
 
 .home p {
