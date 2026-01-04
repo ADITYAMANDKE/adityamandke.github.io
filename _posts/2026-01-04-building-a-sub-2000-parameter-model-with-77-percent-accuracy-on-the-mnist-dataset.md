@@ -57,7 +57,7 @@ For the first attempt, I reduced the channel counts while keeping the same basic
 | Conv1 | $Conv(1 \to 8), 3 \times 3$ | $(8 \times (1 \times 3 \times 3) + 8)$ | 80 |
 | Conv2 | $Conv(8 \to 16), 3 \times 3$ | $(16 \times (8 \times 3 \times 3) + 16)$ | 1,168 |
 | Linear | $Linear(16, 10)$ | $(16 \times 10 + 10)$ | 170 |
-| **Total** | | | **1,418** |
+| **Total** | — | — | **1,418** |
 
 **Result**: This model gave a relatively low accuracy of ~50%.
 
@@ -86,7 +86,7 @@ Depthwise separable convolution (depthwise followed by pointwise) drastically re
 | Pointwise Conv (Conv3) | $16 \times 58 \times (1 \times 1)$ | 928 |
 | BatchNorm (BN3) | $58 \times 2$ | 116 |
 | Linear (FC) | $(58 \times 10) + 10$ | 590 |
-| **TOTAL** | | **1,986** |
+| **TOTAL** | — | **1,986** |
 
 ---
 

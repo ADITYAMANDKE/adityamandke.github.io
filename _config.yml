@@ -26,6 +26,10 @@ github_username:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
