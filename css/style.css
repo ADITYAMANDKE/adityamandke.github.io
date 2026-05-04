@@ -254,6 +254,17 @@ body {
     font-style: italic;
 }
 
+.post-content .references-section-title {
+    font-size: calc(1em + 2px);
+    margin: 20px 0 0 0;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.post-content .references-section-title strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
 /* Home Page */
 .home {
     text-align: center;
