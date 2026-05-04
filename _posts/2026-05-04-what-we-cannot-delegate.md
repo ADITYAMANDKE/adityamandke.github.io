@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What We Cannot Delegate"
-date:   2026-05-04 12:00:00 +0530
+date:   2026-05-04 00:00:00 +0530
 ---
 
 A token predictor trained on vast data has taken the world by storm. Many of us now rely on AI to make day-to-day decisions, offloading critical thinking to it and making use of the freed up time by consuming content online. I had thought of writing about this content echo chamber when I noticed AI-generated content in newspapers, blogs, and social media posts. I realized that most of the stuff I read online(and soon I’d watch as well) is created by a LLM. 

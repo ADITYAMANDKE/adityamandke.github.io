@@ -25,6 +25,7 @@ twitter_username:
 github_username:  
 
 # Build settings
+future: true
 markdown: kramdown
 kramdown:
   input: GFM
