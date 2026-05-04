@@ -17,7 +17,11 @@ Humans on the other hand, are good at inventing stuff not because they hold know
 This brings us to think how LLMs should be used? Delegation of cognitive tasks(not restricted to repetitive) is bound to happen since that is the advantage AI gives us. As the rise of search engines reduced the need to remember ( or physically store) information, the rise of LLMs should take over implementation of ideas. However, letting the LLM decide the story makes one lose the plot. 
 
 References:
-[1] Artificial Hivemind : https://arxiv.org/pdf/2510.22954
-[2] Is AI eroding our critical thinking? : https://bigthink.com/thinking/artificial-intelligence-critical-thinking/
-[3] Belief offloading in Human-AI interaction : https://arxiv.org/abs/2602.08754
-[4] Is AI becoming a second brain at expense of your first one?: https://stackoverflow.blog/2026/03/19/ai-is-becoming-a-second-brain-at-the-expense-of-your-first-one/
+
+[1] Artificial Hivemind  <https://arxiv.org/pdf/2510.22954>
+
+[2] Is AI eroding our critical thinking?  <https://bigthink.com/thinking/artificial-intelligence-critical-thinking/>
+
+[3] Belief offloading in Human-AI interaction  <https://arxiv.org/abs/2602.08754>
+
+[4] Is AI becoming a second brain at expense of your first one? <https://stackoverflow.blog/2026/03/19/ai-is-becoming-a-second-brain-at-the-expense-of-your-first-one/>
