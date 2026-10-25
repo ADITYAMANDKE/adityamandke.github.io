@@ -267,7 +267,40 @@ body {
 
 /* Home Page */
 .home {
-    text-align: center;
+    text-align: left;
+    max-width: 800px;
+}
+
+.home-intro {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-photo {
+    flex-shrink: 0;
+}
+
+.home-photo img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .home-intro {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 24px;
+    }
 }
 
 /* Blog Page */
@@ -276,17 +309,25 @@ body {
 }
 
 .home p {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 24px;
     line-height: 1.8;
 }
 
-.home a {
+.home p a {
     color: #ffffff;
     text-decoration: underline;
+    transition: opacity 0.2s ease;
 }
 
-.home a:hover {
-    text-decoration: underline;
+.home p a:hover {
+    opacity: 0.8;
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 28px 0;
 }
 
 /* Projects Page */
